@@ -1,90 +1,62 @@
-# SmartHire – Resume Analyzer & Job Matcher
+# SmartHire— Resume Skill Analyzer and Job Matcher
 
-SmartHire is a Python-based web application that analyzes resumes, compares candidate skills with job requirements, identifies skill gaps, and recommends learning resources.
+**SmartHire** is a Python-based web application that analyzes resumes, extracts technical skills, compares them with job requirements, and recommends areas for improvement.
 
-## Features
+## 🚀LIVE DEMO
+
+Try SmartHire here: https://smarthire-mnst2vzymud4qcujnnwjmn.streamlit.app/
+
+## ✨FEATURES
 
 - **Resume Analysis:** Upload a PDF resume and extract its text.
-- **Skill Extraction:** Identify technical skills from resume content.
-- **Job Matching:** Compare resume skills with required job skills and calculate a match score.
-- **Skill Gap Analysis:** Identify missing skills.
-- **Learning Recommendations:** Suggest topics and resources to improve missing skills.
-- **Career Assistant:** Get rule-based guidance on job matching and resume improvement.
-- **Analysis History:** Store and view previous analysis summaries using SQLite.
-- **Automated Tests:** Includes unit tests for the skill extractor and job matcher.
+- **Skill Extraction:** Identify technical skills from the resume.
+- **Job Matching:** Compare resume skills against required job skills and calculate a match score.
+- **Missing Skills:** Identify skills that need improvement.
+- **Learning Recommendations:** Get suggestions for learning missing skills.
+- **Career Assistant:** Get rule-based career guidance.
+- **Analysis History:** Store analysis history locally using SQLite.
 
-## Technologies Used
+## 🛠️TECHNOLOGIES USED
 
 - Python
 - Streamlit
 - PyMuPDF
 - SQLite
 - Regular Expressions
-- Unittest
+- Unit Testing
 
-## Getting Started
+## 💻RUN LOCALLY
 
-### 1. Clone the repository
+1. Clone this repository:
 
-```bash
-git clone https://github.com/Harini-K20/SmartHire.git
-cd SmartHire
-```
+   `git clone https://github.com/Harini-K20/SmartHire.git`
 
-### 2. Create and activate a virtual environment
+2. Open the project folder:
 
-On Windows:
+   `cd SmartHire`
 
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
+3. Install the dependencies:
 
-### 3. Install the required packages
+   `pip install -r requirements.txt`
 
-Install the packages used by the project:
+4. Run the application:
 
-```bash
-pip install streamlit pymupdf
-```
+   `streamlit run app.py`
 
-If additional imports require other packages, install those as well.
+## 🧪RUN TESTS
 
-### 4. Run the application
+`python -m unittest test_smart_hire.py`
 
-```bash
-streamlit run app.py
-```
+## ⚠️LIMITATIONS
 
-### 5. Run the tests
+- Skill extraction uses predefined keywords and rules, so it may miss skills written in unusual formats.
+- Career guidance is rule-based and does not replace professional career advice.
+- SQLite history is stored locally and may not persist across cloud deployments.
 
-```bash
-python -m unittest test_smart_hire.py
-```
+## 🔒PRIVACY
 
-## How It Works
+Use sample resumes for testing. Avoid uploading resumes containing sensitive personal information unless you understand how the deployed application handles uploaded files.
 
-1. Upload a PDF resume.
-2. Extract text and identify technical skills.
-3. Enter the skills required for a target job.
-4. View the matching skills, missing skills, and match score.
-5. Explore suggested learning resources and career guidance.
+## 👩‍💻PROJECT GOAL
 
-## Important Note
-
-The skill extractor uses dictionary-based matching and the career assistant uses predefined rules. The match score indicates skill overlap with the entered job requirements; it does not predict hiring success.
-
-## Privacy
-
-Resume files are analyzed by the application and are not intentionally saved in the analysis database. Use caution when uploading resumes containing personal information.
-
-## Future Improvements
-
-- Expand skill recognition.
-- Improve job-description analysis.
-- Add more learning resources.
-- Enhance the user interface and reporting features.
-
----
-
-**Developed as a Python portfolio project.**
+Built to practice Python development, resume analysis, skill matching, and deployment using Streamlit Community Cloud.
